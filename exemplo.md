@@ -4,7 +4,7 @@ Formato do PPT, não os números. Conta fictícia.
 
 ## Bom
 
-**Capa.** Oficialnutri · 07–13/09 vs 31/08–06/09 · R$ 45 mil · ROAS 3,21x · 40% da receita num UGC. Google só na nota.
+**Capa.** Oficialnutri · 07–13/09 vs 31/08–06/09 · R$ 45 mil · ROAS 3,21x · 40% da receita num UGC · **4 campanhas ativas** listadas. Google só na nota.
 
 **Leitura.** A conta não perdeu peça boa. Perdeu força num depoimento com frequência 3,4 e CTR −36%. O UGC de rotina segue em 4,8x.
 
@@ -16,6 +16,7 @@ Formato do PPT, não os números. Conta fictícia.
 
 ## Ruim (não repetir)
 
+- Capa sem o total de campanhas ativas.
 - Uma tabela com 16 colunas numa slide só (fonte ilegível).
 - Google no mesmo ranking da Meta.
 - “O criativo morreu” no lugar de frequência + CTR.

@@ -117,43 +117,93 @@ def blank_slide(prs):
     return slide
 
 
+def parse_campaigns(data):
+    raw = data.get("active_campaigns") or []
+    rows = []
+    for item in raw:
+        if isinstance(item, str):
+            name = item.strip()
+            if name:
+                rows.append((name, "—"))
+            continue
+        if isinstance(item, dict):
+            name = dash(item.get("name"))
+            if name == "—":
+                continue
+            rows.append((name, dash(item.get("spend"))))
+    return rows
+
+
 def cover(prs, data):
     slide = blank_slide(prs)
-    add_text(slide, MARGIN, Inches(1.8), Inches(12), Inches(0.35), "Análise criativa · Meta Ads", size=14, color=MUTED)
-    add_text(slide, MARGIN, Inches(2.15), Inches(12), Inches(0.7), data["client"], size=36, bold=True)
+    campaigns = parse_campaigns(data)
+    total = len(campaigns)
+
+    add_text(slide, MARGIN, Inches(0.28), Inches(12.4), Inches(0.28), "Análise criativa · Meta Ads", size=14, color=MUTED)
+    add_text(slide, MARGIN, Inches(0.52), Inches(12.4), Inches(0.55), data["client"], size=28, bold=True)
     add_text(
         slide,
         MARGIN,
-        Inches(2.9),
-        Inches(12),
-        Inches(0.4),
+        Inches(1.08),
+        Inches(12.4),
+        Inches(0.32),
         f"Semana {data['week_label']}  ·  comparado com {data['week_compare']}",
-        size=16,
+        size=14,
         color=MUTED,
     )
     add_text(
         slide,
         MARGIN,
-        Inches(3.4),
-        Inches(12),
-        Inches(0.4),
+        Inches(1.4),
+        Inches(12.4),
+        Inches(0.3),
         "Visão de anúncio. O que performou, o que cansou, o que pedimos agora.",
-        size=14,
+        size=13,
     )
 
     kpis = [
         (data.get("spend", "—"), "Investimento Meta"),
         (data.get("roas", "—"), "ROAS da semana"),
         (data.get("concentration", "—"), "Receita na peça líder"),
+        (str(total), "Campanhas ativas"),
     ]
     for i, (value, label) in enumerate(kpis):
-        left = MARGIN + Inches(i * 4.1)
-        shape = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, left, Inches(4.3), Inches(3.8), Inches(1.35))
+        left = MARGIN + Inches(i * 3.15)
+        shape = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, left, Inches(1.85), Inches(3.0), Inches(1.05))
         shape.fill.solid()
         shape.fill.fore_color.rgb = RGBColor(0xF3, 0xF3, 0xF3)
         shape.line.color.rgb = RULE
-        add_text(slide, left + Inches(0.2), Inches(4.45), Inches(3.4), Inches(0.55), value, size=24, bold=True)
-        add_text(slide, left + Inches(0.2), Inches(5.05), Inches(3.4), Inches(0.4), label, size=12, color=MUTED)
+        add_text(slide, left + Inches(0.15), Inches(1.95), Inches(2.7), Inches(0.45), value, size=20, bold=True)
+        add_text(slide, left + Inches(0.15), Inches(2.4), Inches(2.7), Inches(0.35), label, size=11, color=MUTED)
+
+    add_text(slide, MARGIN, Inches(3.1), Inches(12.4), Inches(0.32), f"Campanhas ativas · {total}", size=16, bold=True)
+    add_text(
+        slide,
+        MARGIN,
+        Inches(3.4),
+        Inches(12.4),
+        Inches(0.28),
+        "Campanha com gasto em W-1. O número do quadro é o total, mesmo se a tabela mostrar só as 8 de maior gasto.",
+        size=11,
+        color=MUTED,
+    )
+
+    shown = campaigns[:8]
+    extra = total - len(shown)
+    rows = [[name, spend] for name, spend in shown] or [["—", "—"]]
+    if extra > 0:
+        rows.append([f"+{extra} campanha(s) fora desta lista", "—"])
+
+    add_table(
+        slide,
+        ["Campanha", "Gasto W-1"],
+        rows,
+        left=MARGIN,
+        top=Inches(3.75),
+        width=Inches(12.4),
+        height=Inches(2.95),
+        header_fill=HEADER["competitiveness"],
+    )
 
     add_text(
         slide,

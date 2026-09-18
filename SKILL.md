@@ -25,6 +25,7 @@ Pedido de análise criativa, relatório de criativos da terça, deck/PPT de ads,
 - **W-1** = última semana fechada (seg–dom, `America/Sao_Paulo`). Comparar com **W-2** na leitura e nos campeões.
 - Unidade: **anúncio** (nome / ad). Se o mesmo vídeo estiver em vários ads, o DNA agrupa no texto do campeão; a tabela continua no ad.
 - Entra **todo anúncio com gasto em W-1**. Sem corte. Ordenar por valor gasto, maior primeiro.
+- **Campanhas ativas na capa:** campanha Meta distinta com gasto > 0 em W-1. O quadro mostra o **total**. A tabela lista até 8, por gasto. Pausada sem gasto não entra.
 - Sem amostra inventada. Sem `#DIV/0!`. Sem dado = “—”.
 
 ## Por que 3 telas de dados (não 1 tabela)
@@ -43,7 +44,7 @@ O olho acompanha a linha. Se passar de **10 ads**, paginar **dentro do bloco** (
 
 Nesta ordem:
 
-1. **Capa** — conta, semana W-1 vs W-2, investimento Meta, ROAS, % da receita na peça líder. Nota: Google fora deste deck.
+1. **Capa** — conta, semana W-1 vs W-2, investimento Meta, ROAS, % da receita na peça líder, **campanhas ativas (total + lista)**. Nota: Google fora deste deck.
 2. **Leitura** — 2–4 frases em linguagem de cliente. Três caixas: segue performando / perdeu força / sai de linha.
 3. **Dados · Competitividade** — tabela completa do bloco (paginada).
 4. **Dados · Atratividade** — idem, **mesmas linhas na mesma ordem**.
@@ -106,6 +107,7 @@ O `run.sh` cria um venv local e instala `python-pptx` na primeira vez. Não usar
 ## Checklist antes de entregar
 
 - [ ] Só Meta; Google só na nota da capa
+- [ ] Capa com total de campanhas ativas (gasto em W-1) e a lista
 - [ ] Todo ad com gasto em W-1; ordem = gasto desc
 - [ ] 3 telas de dados, mesmas linhas, mesmas ordem
 - [ ] Atratividade tem hook / hold 50% / ThruPlay (vídeo) ou “—”

@@ -10,6 +10,12 @@ O script `scripts/build_pptx.py` lê um JSON e grava `.pptx`. Não pular campo o
   "spend": "R$ 45 mil",
   "roas": "3,21x",
   "concentration": "40%",
+  "active_campaigns": [
+    { "name": "Advantage+ NC Regepepty", "spend": "R$ 39,2 mil" },
+    { "name": "Advantage+ RC kit", "spend": "R$ 2,4 mil" },
+    { "name": "Teste NC Antes/Depois", "spend": "R$ 2,1 mil" },
+    { "name": "Prospecting UGC testes", "spend": "R$ 1,4 mil" }
+  ],
   "reading": "2–4 frases. Fato e número. Linguagem de cliente.",
   "buckets": {
     "performing": ["UGC Rotina 15s · ROAS 4,8x", "UGC Rotina v2 · ROAS 4,2x"],

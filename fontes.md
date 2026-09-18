@@ -31,4 +31,6 @@ Desejável: frequência (ou alcance para calcular), CPM (ou calcular), CTR/CPC (
 
 ## Recorte de anúncio
 
-Uma linha = um anúncio da semana com gasto > 0. Não agrupar por campanha nesta skill. Não misturar conjunto com ad.
+Uma linha = um anúncio da semana com gasto > 0. Não agrupar por campanha nesta skill (exceto o bloco da capa). Não misturar conjunto com ad.
+
+**Capa — campanhas ativas:** nomes distintos de campanha Meta com gasto > 0 em W-1. Ordenar por gasto. O total do quadro = quantidade dessas campanhas.
