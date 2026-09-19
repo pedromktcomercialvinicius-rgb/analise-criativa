@@ -30,7 +30,8 @@ HEADER = {
     "conversion": RGBColor(0x2F, 0x3A, 0x32),
 }
 
-ROWS_PER_SLIDE = 10
+TOP_ADS = 10
+MIN_SPEND_BRL = 15  # exclusivo: gasto > R$ 15
 
 
 def dash(value) -> str:
@@ -107,18 +108,15 @@ def add_table(slide, headers, rows, *, left, top, width, height, header_fill):
     return table
 
 
-def chunk(items, n):
-    for i in range(0, len(items), n):
-        yield i // n, items[i : i + n]
-
-
 def blank_slide(prs):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     return slide
 
 
 def parse_campaigns(data):
-    raw = data.get("active_campaigns") or []
+    raw = data.get("active_campaigns")
+    if not raw:
+        raw = data.get("campaigns") or []
     rows = []
     for item in raw:
         if isinstance(item, str):
@@ -239,7 +237,7 @@ def reading(prs, data):
         add_text(slide, left + Inches(0.2), Inches(2.95), Inches(3.6), Inches(3.5), body, size=13)
 
 
-def data_block(prs, data, kind: str):
+def data_block(prs, ads, kind: str, *, campaign: str, extra: str = ""):
     specs = {
         "competitiveness": {
             "act": "2 · Dados",
@@ -290,41 +288,82 @@ def data_block(prs, data, kind: str):
         },
     }
     spec = specs[kind]
-    ads = data.get("ads") or []
-    pages = list(chunk(ads, ROWS_PER_SLIDE)) or [(0, [])]
-    total = len(pages)
-
-    for page_i, group in pages:
-        slide = blank_slide(prs)
-        suffix = f"  ({page_i + 1}/{total})" if total > 1 else ""
-        add_act(slide, spec["act"], spec["title"] + suffix)
-        add_text(slide, MARGIN, Inches(0.88), Inches(12.4), Inches(0.32), spec["subtitle"], size=12, color=MUTED)
-
-        rows = []
-        for ad in group:
-            block = ad.get(kind) or {}
-            row = [dash(ad.get("name"))]
-            for key in spec["keys"]:
-                row.append(dash(block.get(key)))
-            rows.append(row)
-
-        add_table(
-            slide,
-            spec["headers"],
-            rows,
-            left=MARGIN,
-            top=Inches(1.25),
-            width=Inches(12.4),
-            height=Inches(5.7),
-            header_fill=spec["fill"],
-        )
-
-
-def champion(prs, item, index, total):
+    locked = ads[:TOP_ADS]
     slide = blank_slide(prs)
-    add_act(slide, "3 · Criativos", f"Campeão {index} de {total}")
+    add_act(slide, spec["act"], f"{spec['title']} · {campaign}")
+    add_text(
+        slide,
+        MARGIN,
+        Inches(0.88),
+        Inches(12.4),
+        Inches(0.36),
+        f"{spec['subtitle']} Top {TOP_ADS} com gasto > R$ {MIN_SPEND_BRL}. Mesma ordem nas três etapas.{extra}",
+        size=12,
+        color=MUTED,
+    )
+
+    rows = []
+    for ad in locked:
+        block = ad.get(kind) or {}
+        row = [dash(ad.get("name"))]
+        for key in spec["keys"]:
+            row.append(dash(block.get(key)))
+        rows.append(row)
+    if not rows:
+        rows = [["—"] + ["—"] * (len(spec["headers"]) - 1)]
+
+    add_table(
+        slide,
+        spec["headers"],
+        rows,
+        left=MARGIN,
+        top=Inches(1.32),
+        width=Inches(12.4),
+        height=Inches(5.55),
+        header_fill=spec["fill"],
+    )
+
+
+def campaign_champions(camp):
+    items = []
+    if camp.get("champion"):
+        items.append(camp["champion"])
+    items.extend(camp.get("champions") or [])
+    return items
+
+
+def campaign_sections(prs, data):
+    campaigns = data.get("campaigns") or []
+    if not campaigns and data.get("ads"):
+        campaigns = [{"name": "Conta", "ads": data.get("ads") or [], "champions": data.get("champions") or []}]
+
+    shown = 0
+    for camp in campaigns:
+        name = dash(camp.get("name"))
+        ads = camp.get("ads") or []
+        below = camp.get("below_floor")
+        extra = ""
+        if below:
+            extra = f" {below} ads com R$ {MIN_SPEND_BRL} ou menos, fora desta análise."
+        for kind in ("competitiveness", "attractiveness", "conversion"):
+            data_block(prs, ads, kind, campaign=name, extra=extra)
+        for champ in campaign_champions(camp):
+            if shown >= 3:
+                break
+            champion(prs, champ, campaign=name)
+            shown += 1
+
+    if shown == 0:
+        for item in (data.get("champions") or [])[:3]:
+            champion(prs, item, campaign="Conta")
+
+
+def champion(prs, item, *, campaign: str):
+    slide = blank_slide(prs)
+    add_act(slide, "3 · Criativos", f"Campeão · {campaign}")
     add_text(slide, MARGIN, Inches(0.95), Inches(12.4), Inches(0.45), item.get("name", ""), size=26, bold=True)
-    add_text(slide, MARGIN, Inches(1.4), Inches(12.4), Inches(0.35), item.get("meta", ""), size=13, color=MUTED)
+    meta = dash(item.get("meta"))
+    add_text(slide, MARGIN, Inches(1.4), Inches(12.4), Inches(0.35), meta, size=13, color=MUTED)
 
     stats = (item.get("stats") or [])[:4]
     for i, stat in enumerate(stats):
@@ -371,12 +410,19 @@ def dna_slide(prs, data):
     )
     reqs = data.get("dna_requests") or []
     rows = [
-        [dash(r.get("name")), dash(r.get("copy")), dash(r.get("change")), dash(r.get("qty")), dash(r.get("criteria"))]
+        [
+            dash(r.get("campaign") or r.get("name")),
+            dash(r.get("name")),
+            dash(r.get("copy")),
+            dash(r.get("change")),
+            dash(r.get("qty")),
+            dash(r.get("criteria")),
+        ]
         for r in reqs
-    ] or [["—", "—", "—", "—", "—"]]
+    ] or [["—", "—", "—", "—", "—", "—"]]
     add_table(
         slide,
-        ["Pedido", "Copia", "Muda", "Qtde", "Como sabemos que funcionou"],
+        ["Campanha", "Pedido", "Copia", "Muda", "Qtde", "Como sabemos que funcionou"],
         rows,
         left=MARGIN,
         top=Inches(1.45),
@@ -429,12 +475,7 @@ def build(data: dict, output: Path) -> Path:
     prs.slide_height = SLIDE_H
     cover(prs, data)
     reading(prs, data)
-    data_block(prs, data, "competitiveness")
-    data_block(prs, data, "attractiveness")
-    data_block(prs, data, "conversion")
-    champions = data.get("champions") or []
-    for i, item in enumerate(champions[:3], start=1):
-        champion(prs, item, i, min(len(champions), 3))
+    campaign_sections(prs, data)
     dna_slide(prs, data)
     ideas_slide(prs, data)
     output.parent.mkdir(parents=True, exist_ok=True)

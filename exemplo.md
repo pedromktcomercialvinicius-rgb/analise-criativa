@@ -8,9 +8,9 @@ Formato do PPT, não os números. Conta fictícia.
 
 **Leitura.** A conta não perdeu peça boa. Perdeu força num depoimento com frequência 3,4 e CTR −36%. O UGC de rotina segue em 4,8x.
 
-**Dados.** Três slides, os mesmos 8 anúncios, gasto desc. Hook no estático = “—”. Sem compra = “—” no ROAS.
+**Dados.** Por campanha. Advantage+ NC: top 10 (aqui 4 ads) com gasto > R$ 15, mesma ordem em Competitividade / Atratividade / Conversão. Teste NC e RC cada um no bloco deles. Hook no estático = “—”. Sem compra = “—” no ROAS.
 
-**Campeão 1.** UGC Rotina 15s. O que funcionou: 15s, gancho de hábito, kit sem %. Hipótese: a próxima leva copia isso e troca uma abertura.
+**Campeão.** UGC Rotina 15s, **na campanha** Advantage+ NC. O que funcionou: 15s, gancho de hábito, kit sem %. Hipótese: a próxima leva copia isso e troca uma abertura.
 
 **Pedido.** 2 variações do DNA + 1 ideia nova com teto. Não pedir estático de desconto nem depoimento 30s.
 
@@ -18,6 +18,9 @@ Formato do PPT, não os números. Conta fictícia.
 
 - Capa sem o total de campanhas ativas.
 - Uma tabela com 16 colunas numa slide só (fonte ilegível).
+- Misturar ads de campanhas diferentes na mesma tabela.
+- Incluir ad de R$ 15 ou menos.
+- Top 10 numa ordem na Competitividade e outra na Conversão.
 - Google no mesmo ranking da Meta.
 - “O criativo morreu” no lugar de frequência + CTR.
 - Carrinho em Atratividade misturado com hook.

@@ -6,10 +6,22 @@
   "roas": "3,21x",
   "concentration": "40%",
   "active_campaigns": [
-    { "name": "Advantage+ NC Regepepty", "spend": "R$ 39,2 mil" },
-    { "name": "Advantage+ RC kit", "spend": "R$ 2,4 mil" },
-    { "name": "Teste NC Antes/Depois", "spend": "R$ 2,1 mil" },
-    { "name": "Prospecting UGC testes", "spend": "R$ 1,4 mil" }
+    {
+      "name": "Advantage+ NC Regepepty",
+      "spend": "R$ 39,2 mil"
+    },
+    {
+      "name": "Advantage+ RC kit",
+      "spend": "R$ 2,4 mil"
+    },
+    {
+      "name": "Teste NC Antes/Depois",
+      "spend": "R$ 2,1 mil"
+    },
+    {
+      "name": "Prospecting UGC testes",
+      "spend": "R$ 1,4 mil"
+    }
   ],
   "reading": "A conta não perdeu peça boa. Perdeu força num depoimento que já estava no ar há tempo demais, e concentrou receita demais num único UGC de rotina.",
   "buckets": {
@@ -24,327 +36,30 @@
       "Estático Off 20% · ROAS 0,8x"
     ]
   },
-  "ads": [
-    {
-      "name": "UGC Rotina 15s",
-      "tone": "performing",
-      "competitiveness": {
-        "reach": "410.000",
-        "impressions": "920.000",
-        "frequency": "2,2",
-        "cpm": "R$ 19,78",
-        "spend": "R$ 18.200"
-      },
-      "attractiveness": {
-        "clicks": "16.750",
-        "ctr": "1,82%",
-        "cpc": "R$ 1,09",
-        "hook": "38%",
-        "hold": "18%",
-        "thruplay": "9%"
-      },
-      "conversion": {
-        "pageview": "4.850",
-        "tx_pv": "29%",
-        "cart": "612",
-        "tx_cart": "12,6%",
-        "cpa_cart": "R$ 29,74",
-        "purchases": "89",
-        "tx_purchases": "14,5%",
-        "revenue": "R$ 87.360",
-        "cpa": "R$ 205",
-        "roas": "4,80x"
-      }
-    },
-    {
-      "name": "UGC Rotina v2 (dor)",
-      "tone": "performing",
-      "competitiveness": {
-        "reach": "195.000",
-        "impressions": "410.000",
-        "frequency": "2,1",
-        "cpm": "R$ 20,98",
-        "spend": "R$ 8.600"
-      },
-      "attractiveness": {
-        "clicks": "7.010",
-        "ctr": "1,71%",
-        "cpc": "R$ 1,23",
-        "hook": "36%",
-        "hold": "17%",
-        "thruplay": "8%"
-      },
-      "conversion": {
-        "pageview": "2.140",
-        "tx_pv": "31%",
-        "cart": "255",
-        "tx_cart": "11,9%",
-        "cpa_cart": "R$ 33,73",
-        "purchases": "41",
-        "tx_purchases": "16,1%",
-        "revenue": "R$ 36.120",
-        "cpa": "R$ 210",
-        "roas": "4,20x"
-      }
-    },
-    {
-      "name": "Depoimento Ana 30s",
-      "tone": "weak",
-      "competitiveness": {
-        "reach": "140.000",
-        "impressions": "480.000",
-        "frequency": "3,4",
-        "cpm": "R$ 25,83",
-        "spend": "R$ 12.400"
-      },
-      "attractiveness": {
-        "clicks": "4.370",
-        "ctr": "0,91%",
-        "cpc": "R$ 2,84",
-        "hook": "24%",
-        "hold": "11%",
-        "thruplay": "4%"
-      },
-      "conversion": {
-        "pageview": "1.820",
-        "tx_pv": "42%",
-        "cart": "198",
-        "tx_cart": "10,9%",
-        "cpa_cart": "R$ 62,63",
-        "purchases": "22",
-        "tx_purchases": "11,1%",
-        "revenue": "R$ 23.560",
-        "cpa": "R$ 564",
-        "roas": "1,90x"
-      }
-    },
-    {
-      "name": "UGC Antes/Depois 12s",
-      "tone": "early",
-      "competitiveness": {
-        "reach": "68.000",
-        "impressions": "95.000",
-        "frequency": "1,4",
-        "cpm": "R$ 22,10",
-        "spend": "R$ 2.100"
-      },
-      "attractiveness": {
-        "clicks": "1.995",
-        "ctr": "2,10%",
-        "cpc": "R$ 1,05",
-        "hook": "41%",
-        "hold": "21%",
-        "thruplay": "11%"
-      },
-      "conversion": {
-        "pageview": "410",
-        "tx_pv": "21%",
-        "cart": "48",
-        "tx_cart": "11,7%",
-        "cpa_cart": "R$ 43,75",
-        "purchases": "8",
-        "tx_purchases": "16,7%",
-        "revenue": "R$ 6.510",
-        "cpa": "R$ 263",
-        "roas": "3,10x"
-      }
-    },
-    {
-      "name": "Estático Off 20%",
-      "tone": "kill",
-      "competitiveness": {
-        "reach": "71.000",
-        "impressions": "122.000",
-        "frequency": "1,7",
-        "cpm": "R$ 31,15",
-        "spend": "R$ 3.800"
-      },
-      "attractiveness": {
-        "clicks": "512",
-        "ctr": "0,42%",
-        "cpc": "R$ 7,42",
-        "hook": "—",
-        "hold": "—",
-        "thruplay": "—"
-      },
-      "conversion": {
-        "pageview": "210",
-        "tx_pv": "41%",
-        "cart": "19",
-        "tx_cart": "9,0%",
-        "cpa_cart": "R$ 200,00",
-        "purchases": "4",
-        "tx_purchases": "21,1%",
-        "revenue": "R$ 3.040",
-        "cpa": "R$ 950",
-        "roas": "0,80x"
-      }
-    },
-    {
-      "name": "Carrossel kit 3",
-      "tone": "neutral",
-      "competitiveness": {
-        "reach": "52.000",
-        "impressions": "88.000",
-        "frequency": "1,7",
-        "cpm": "R$ 15,91",
-        "spend": "R$ 1.400"
-      },
-      "attractiveness": {
-        "clicks": "774",
-        "ctr": "0,88%",
-        "cpc": "R$ 1,81",
-        "hook": "—",
-        "hold": "—",
-        "thruplay": "—"
-      },
-      "conversion": {
-        "pageview": "190",
-        "tx_pv": "25%",
-        "cart": "22",
-        "tx_cart": "11,6%",
-        "cpa_cart": "R$ 63,64",
-        "purchases": "5",
-        "tx_purchases": "22,7%",
-        "revenue": "R$ 3.360",
-        "cpa": "R$ 280",
-        "roas": "2,40x"
-      }
-    },
-    {
-      "name": "UGC rotina 9:16 v3",
-      "tone": "neutral",
-      "competitiveness": {
-        "reach": "29.000",
-        "impressions": "41.000",
-        "frequency": "1,4",
-        "cpm": "R$ 21,95",
-        "spend": "R$ 900"
-      },
-      "attractiveness": {
-        "clicks": "574",
-        "ctr": "1,40%",
-        "cpc": "R$ 1,57",
-        "hook": "33%",
-        "hold": "15%",
-        "thruplay": "7%"
-      },
-      "conversion": {
-        "pageview": "120",
-        "tx_pv": "21%",
-        "cart": "14",
-        "tx_cart": "11,7%",
-        "cpa_cart": "R$ 64,29",
-        "purchases": "3",
-        "tx_purchases": "21,4%",
-        "revenue": "R$ 1.890",
-        "cpa": "R$ 300",
-        "roas": "2,10x"
-      }
-    },
-    {
-      "name": "Reels prova social",
-      "tone": "neutral",
-      "competitiveness": {
-        "reach": "40.000",
-        "impressions": "55.000",
-        "frequency": "1,4",
-        "cpm": "R$ 12,73",
-        "spend": "R$ 700"
-      },
-      "attractiveness": {
-        "clicks": "605",
-        "ctr": "1,10%",
-        "cpc": "R$ 1,16",
-        "hook": "29%",
-        "hold": "12%",
-        "thruplay": "5%"
-      },
-      "conversion": {
-        "pageview": "95",
-        "tx_pv": "16%",
-        "cart": "9",
-        "tx_cart": "9,5%",
-        "cpa_cart": "R$ 77,78",
-        "purchases": "2",
-        "tx_purchases": "22,2%",
-        "revenue": "R$ 1.120",
-        "cpa": "R$ 350",
-        "roas": "1,60x"
-      }
-    }
-  ],
-  "champions": [
-    {
-      "name": "UGC Rotina 15s",
-      "meta": "Novos clientes · kit 3 potes · 3 semanas no ar",
-      "stats": [
-        { "value": "4,8x", "label": "ROAS (4,6x na semana passada)" },
-        { "value": "38%", "label": "Hook rate (39% → estável)" },
-        { "value": "1,82%", "label": "CTR de link (+4%)" },
-        { "value": "2,2", "label": "Frequência (ainda saudável)" }
-      ],
-      "worked": [
-        "Formato: UGC vertical de 15s, rotina de manhã — rápido, sem cara de anúncio.",
-        "Gancho: “eu tomo isso todo dia antes do café” — hábito, não depoimento clínico.",
-        "Oferta: kit na cena, sem faixa de desconto na tela."
-      ],
-      "hypothesis": "O que vende aqui é prova de hábito em 15 segundos. A próxima leva copia este DNA e só troca uma variável."
-    },
-    {
-      "name": "UGC Rotina v2 (dor)",
-      "meta": "Mesmo conjunto do campeão 1 · única mudança: abertura",
-      "stats": [
-        { "value": "4,2x", "label": "ROAS" },
-        { "value": "36%", "label": "Hook rate" },
-        { "value": "1,71%", "label": "CTR de link" },
-        { "value": "R$ 210", "label": "CPA (quase igual ao líder)" }
-      ],
-      "worked": [
-        "Mesmo formato e mesmo kit. Só o gancho mudou: “minha pele não reagia a nada”.",
-        "Hook um pouco menor que o original, mas quem clica compra no mesmo ritmo.",
-        "O DNA de rotina aguenta variação de abertura — não depende de uma frase só."
-      ],
-      "hypothesis": "Ângulo de dor funciona como porta de entrada; o meio do vídeo (rotina + kit) é o que converte."
-    },
-    {
-      "name": "UGC Antes/Depois 12s",
-      "meta": "Conjunto de teste · R$ 2,1 mil · ainda cedo para cravar",
-      "stats": [
-        { "value": "41%", "label": "Hook — o mais alto da semana" },
-        { "value": "2,10%", "label": "CTR de link" },
-        { "value": "3,1x", "label": "ROAS (amostra curta)" },
-        { "value": "8", "label": "Compras" }
-      ],
-      "worked": [
-        "Abre no resultado visual, não no rosto. 12s.",
-        "CTR acima dos campeões maduros.",
-        "Ainda não é campeão de retorno: pouca compra para declarar vitória."
-      ],
-      "hypothesis": "Antes/depois ganha a parada no feed. Pode virar o próximo líder se o CPA se sustentar com mais verba."
-    }
-  ],
   "dna_requests": [
     {
       "name": "Rotina 15s — gancho de noite",
       "copy": "Formato 15s + kit sem % na tela",
       "change": "Abertura: rotina noturna, não café",
       "qty": "2 peças (2 pessoas)",
-      "criteria": "Hook ≥ 35% e CPA no nível do líder, em 5 dias ou R$ 2 mil"
+      "criteria": "Hook ≥ 35% e CPA no nível do líder, em 5 dias ou R$ 2 mil",
+      "campaign": "Advantage+ NC Regepepty"
     },
     {
       "name": "Rotina 15s — outra narradora",
       "copy": "Mesmo roteiro de hábito",
       "change": "Mulher 25–34, sem influenciadora",
       "qty": "2 peças",
-      "criteria": "CTR ≥ 1,7% sem piorar o retorno"
+      "criteria": "CTR ≥ 1,7% sem piorar o retorno",
+      "campaign": "Advantage+ NC Regepepty"
     },
     {
       "name": "Rotina v2 — novas dores",
       "copy": "Meio do vídeo + kit",
       "change": "3 aberturas de dor diferentes",
       "qty": "3 cortes (mesmo miolo)",
-      "criteria": "Se o hook passar de 36%, essa abertura vira o novo padrão"
+      "criteria": "Se o hook passar de 36%, essa abertura vira o novo padrão",
+      "campaign": "Advantage+ NC Regepepty"
     }
   ],
   "new_ideas": [
@@ -363,5 +78,369 @@
     "Novo estático de desconto.",
     "Outro depoimento de 30s no mesmo público.",
     "Mudança de oferta ou de preço na peça."
+  ],
+  "campaigns": [
+    {
+      "name": "Advantage+ NC Regepepty",
+      "spend": "R$ 39,2 mil",
+      "below_floor": 2,
+      "ads": [
+        {
+          "name": "UGC Rotina 15s",
+          "tone": "performing",
+          "competitiveness": {
+            "reach": "410.000",
+            "impressions": "920.000",
+            "frequency": "2,2",
+            "cpm": "R$ 19,78",
+            "spend": "R$ 18.200"
+          },
+          "attractiveness": {
+            "clicks": "16.750",
+            "ctr": "1,82%",
+            "cpc": "R$ 1,09",
+            "hook": "38%",
+            "hold": "18%",
+            "thruplay": "9%"
+          },
+          "conversion": {
+            "pageview": "4.850",
+            "tx_pv": "29%",
+            "cart": "612",
+            "tx_cart": "12,6%",
+            "cpa_cart": "R$ 29,74",
+            "purchases": "89",
+            "tx_purchases": "14,5%",
+            "revenue": "R$ 87.360",
+            "cpa": "R$ 205",
+            "roas": "4,80x"
+          }
+        },
+        {
+          "name": "Depoimento Ana 30s",
+          "tone": "weak",
+          "competitiveness": {
+            "reach": "140.000",
+            "impressions": "480.000",
+            "frequency": "3,4",
+            "cpm": "R$ 25,83",
+            "spend": "R$ 12.400"
+          },
+          "attractiveness": {
+            "clicks": "4.370",
+            "ctr": "0,91%",
+            "cpc": "R$ 2,84",
+            "hook": "24%",
+            "hold": "11%",
+            "thruplay": "4%"
+          },
+          "conversion": {
+            "pageview": "1.820",
+            "tx_pv": "42%",
+            "cart": "198",
+            "tx_cart": "10,9%",
+            "cpa_cart": "R$ 62,63",
+            "purchases": "22",
+            "tx_purchases": "11,1%",
+            "revenue": "R$ 23.560",
+            "cpa": "R$ 564",
+            "roas": "1,90x"
+          }
+        },
+        {
+          "name": "UGC Rotina v2 (dor)",
+          "tone": "performing",
+          "competitiveness": {
+            "reach": "195.000",
+            "impressions": "410.000",
+            "frequency": "2,1",
+            "cpm": "R$ 20,98",
+            "spend": "R$ 8.600"
+          },
+          "attractiveness": {
+            "clicks": "7.010",
+            "ctr": "1,71%",
+            "cpc": "R$ 1,23",
+            "hook": "36%",
+            "hold": "17%",
+            "thruplay": "8%"
+          },
+          "conversion": {
+            "pageview": "2.140",
+            "tx_pv": "31%",
+            "cart": "255",
+            "tx_cart": "11,9%",
+            "cpa_cart": "R$ 33,73",
+            "purchases": "41",
+            "tx_purchases": "16,1%",
+            "revenue": "R$ 36.120",
+            "cpa": "R$ 210",
+            "roas": "4,20x"
+          }
+        },
+        {
+          "name": "Estático Off 20%",
+          "tone": "kill",
+          "competitiveness": {
+            "reach": "71.000",
+            "impressions": "122.000",
+            "frequency": "1,7",
+            "cpm": "R$ 31,15",
+            "spend": "R$ 3.800"
+          },
+          "attractiveness": {
+            "clicks": "512",
+            "ctr": "0,42%",
+            "cpc": "R$ 7,42",
+            "hook": "—",
+            "hold": "—",
+            "thruplay": "—"
+          },
+          "conversion": {
+            "pageview": "210",
+            "tx_pv": "41%",
+            "cart": "19",
+            "tx_cart": "9,0%",
+            "cpa_cart": "R$ 200,00",
+            "purchases": "4",
+            "tx_purchases": "21,1%",
+            "revenue": "R$ 3.040",
+            "cpa": "R$ 950",
+            "roas": "0,80x"
+          }
+        }
+      ],
+      "champions": [
+        {
+          "name": "UGC Rotina 15s",
+          "meta": "Novos clientes · kit 3 potes · 3 semanas no ar",
+          "stats": [
+            {
+              "value": "4,8x",
+              "label": "ROAS (4,6x na semana passada)"
+            },
+            {
+              "value": "38%",
+              "label": "Hook rate (39% → estável)"
+            },
+            {
+              "value": "1,82%",
+              "label": "CTR de link (+4%)"
+            },
+            {
+              "value": "2,2",
+              "label": "Frequência (ainda saudável)"
+            }
+          ],
+          "worked": [
+            "Formato: UGC vertical de 15s, rotina de manhã — rápido, sem cara de anúncio.",
+            "Gancho: “eu tomo isso todo dia antes do café” — hábito, não depoimento clínico.",
+            "Oferta: kit na cena, sem faixa de desconto na tela."
+          ],
+          "hypothesis": "O que vende aqui é prova de hábito em 15 segundos. A próxima leva copia este DNA e só troca uma variável."
+        },
+        {
+          "name": "UGC Rotina v2 (dor)",
+          "meta": "Mesmo conjunto do campeão 1 · única mudança: abertura",
+          "stats": [
+            {
+              "value": "4,2x",
+              "label": "ROAS"
+            },
+            {
+              "value": "36%",
+              "label": "Hook rate"
+            },
+            {
+              "value": "1,71%",
+              "label": "CTR de link"
+            },
+            {
+              "value": "R$ 210",
+              "label": "CPA (quase igual ao líder)"
+            }
+          ],
+          "worked": [
+            "Mesmo formato e mesmo kit. Só o gancho mudou: “minha pele não reagia a nada”.",
+            "Hook um pouco menor que o original, mas quem clica compra no mesmo ritmo.",
+            "O DNA de rotina aguenta variação de abertura — não depende de uma frase só."
+          ],
+          "hypothesis": "Ângulo de dor funciona como porta de entrada; o meio do vídeo (rotina + kit) é o que converte."
+        }
+      ]
+    },
+    {
+      "name": "Teste NC Antes/Depois",
+      "spend": "R$ 2,1 mil",
+      "below_floor": 0,
+      "ads": [
+        {
+          "name": "UGC Antes/Depois 12s",
+          "tone": "early",
+          "competitiveness": {
+            "reach": "68.000",
+            "impressions": "95.000",
+            "frequency": "1,4",
+            "cpm": "R$ 22,10",
+            "spend": "R$ 2.100"
+          },
+          "attractiveness": {
+            "clicks": "1.995",
+            "ctr": "2,10%",
+            "cpc": "R$ 1,05",
+            "hook": "41%",
+            "hold": "21%",
+            "thruplay": "11%"
+          },
+          "conversion": {
+            "pageview": "410",
+            "tx_pv": "21%",
+            "cart": "48",
+            "tx_cart": "11,7%",
+            "cpa_cart": "R$ 43,75",
+            "purchases": "8",
+            "tx_purchases": "16,7%",
+            "revenue": "R$ 6.510",
+            "cpa": "R$ 263",
+            "roas": "3,10x"
+          }
+        }
+      ],
+      "champion": {
+        "name": "UGC Antes/Depois 12s",
+        "meta": "Conjunto de teste · R$ 2,1 mil · ainda cedo para cravar",
+        "stats": [
+          {
+            "value": "41%",
+            "label": "Hook — o mais alto da semana"
+          },
+          {
+            "value": "2,10%",
+            "label": "CTR de link"
+          },
+          {
+            "value": "3,1x",
+            "label": "ROAS (amostra curta)"
+          },
+          {
+            "value": "8",
+            "label": "Compras"
+          }
+        ],
+        "worked": [
+          "Abre no resultado visual, não no rosto. 12s.",
+          "CTR acima dos campeões maduros.",
+          "Ainda não é campeão de retorno: pouca compra para declarar vitória."
+        ],
+        "hypothesis": "Antes/depois ganha a parada no feed. Pode virar o próximo líder se o CPA se sustentar com mais verba."
+      }
+    },
+    {
+      "name": "Advantage+ RC kit",
+      "spend": "R$ 2,4 mil",
+      "below_floor": 1,
+      "ads": [
+        {
+          "name": "Carrossel kit 3",
+          "tone": "neutral",
+          "competitiveness": {
+            "reach": "52.000",
+            "impressions": "88.000",
+            "frequency": "1,7",
+            "cpm": "R$ 15,91",
+            "spend": "R$ 1.400"
+          },
+          "attractiveness": {
+            "clicks": "774",
+            "ctr": "0,88%",
+            "cpc": "R$ 1,81",
+            "hook": "—",
+            "hold": "—",
+            "thruplay": "—"
+          },
+          "conversion": {
+            "pageview": "190",
+            "tx_pv": "25%",
+            "cart": "22",
+            "tx_cart": "11,6%",
+            "cpa_cart": "R$ 63,64",
+            "purchases": "5",
+            "tx_purchases": "22,7%",
+            "revenue": "R$ 3.360",
+            "cpa": "R$ 280",
+            "roas": "2,40x"
+          }
+        },
+        {
+          "name": "Reels prova social",
+          "tone": "neutral",
+          "competitiveness": {
+            "reach": "40.000",
+            "impressions": "55.000",
+            "frequency": "1,4",
+            "cpm": "R$ 12,73",
+            "spend": "R$ 700"
+          },
+          "attractiveness": {
+            "clicks": "605",
+            "ctr": "1,10%",
+            "cpc": "R$ 1,16",
+            "hook": "29%",
+            "hold": "12%",
+            "thruplay": "5%"
+          },
+          "conversion": {
+            "pageview": "95",
+            "tx_pv": "16%",
+            "cart": "9",
+            "tx_cart": "9,5%",
+            "cpa_cart": "R$ 77,78",
+            "purchases": "2",
+            "tx_purchases": "22,2%",
+            "revenue": "R$ 1.120",
+            "cpa": "R$ 350",
+            "roas": "1,60x"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Prospecting UGC testes",
+      "spend": "R$ 1,4 mil",
+      "below_floor": 0,
+      "ads": [
+        {
+          "name": "UGC rotina 9:16 v3",
+          "tone": "neutral",
+          "competitiveness": {
+            "reach": "29.000",
+            "impressions": "41.000",
+            "frequency": "1,4",
+            "cpm": "R$ 21,95",
+            "spend": "R$ 900"
+          },
+          "attractiveness": {
+            "clicks": "574",
+            "ctr": "1,40%",
+            "cpc": "R$ 1,57",
+            "hook": "33%",
+            "hold": "15%",
+            "thruplay": "7%"
+          },
+          "conversion": {
+            "pageview": "120",
+            "tx_pv": "21%",
+            "cart": "14",
+            "tx_cart": "11,7%",
+            "cpa_cart": "R$ 64,29",
+            "purchases": "3",
+            "tx_purchases": "21,4%",
+            "revenue": "R$ 1.890",
+            "cpa": "R$ 300",
+            "roas": "2,10x"
+          }
+        }
+      ]
+    }
   ]
 }

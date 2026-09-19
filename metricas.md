@@ -2,6 +2,8 @@
 
 Fórmulas usam **totais da semana** (não média das médias). Clique = **clique de link**. Sem dado ou divisão por zero = “—”.
 
+Recorte da tabela: gasto **> R$ 15**, **por campanha**, top 10 por gasto. Mediana e “acima do mix” = peers da mesma campanha.
+
 ## Competitividade
 
 O anúncio está barato ou caro para aparecer?
