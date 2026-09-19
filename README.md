@@ -7,7 +7,7 @@ Skill para montar o **deck semanal de criativos Meta Ads** em PowerPoint: compet
 - PPT 16:9 para o cliente (especialista apresenta)
 - Só Meta; Google replica campeões a cada 14 dias (fora deste deck)
 - Anúncio com gasto **> R$ 15** na semana; top 10 **por campanha**
-- 3 telas de dados por campanha (mesmos ads, mesma ordem)
+- 3 telas de dados por campanha (mesmos ads, mesma ordem), com o campeão da etapa
 - Até 3 slides de campeão: peça na tela (imagem ou vídeo/frame), roteiro, ângulo, retenção, hipótese
 - Pedido = DNA do campeão + 1–2 ideias novas
 

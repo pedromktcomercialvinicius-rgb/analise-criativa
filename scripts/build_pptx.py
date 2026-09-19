@@ -95,17 +95,28 @@ def fill_cell(cell, text, *, size=11, bold=False, fill=None, color=INK, align=PP
         tcPr.append(ln)
 
 
-def add_table(slide, headers, rows, *, left, top, width, height, header_fill):
+def add_table(slide, headers, rows, *, left, top, width, height, header_fill, highlight_rows=None):
     table_shape = slide.shapes.add_table(1 + len(rows), len(headers), left, top, width, height)
     table = table_shape.table
+    winners = set(highlight_rows or [])
+    win_bg = RGBColor(0xEE, 0xF3, 0xF0)
     for i, header in enumerate(headers):
         cell = table.cell(0, i)
         fill_cell(cell, header, size=10, bold=True, fill=header_fill, color=WHITE, align=PP_ALIGN.CENTER)
     for r, row in enumerate(rows, start=1):
-        bg = WHITE if r % 2 else ROW
+        winner = r in winners
+        bg = win_bg if winner else (WHITE if r % 2 else ROW)
         for c, value in enumerate(row):
             align = PP_ALIGN.LEFT if c == 0 else PP_ALIGN.RIGHT
-            fill_cell(table.cell(r, c), value, size=10, fill=bg, color=INK, align=align)
+            fill_cell(
+                table.cell(r, c),
+                value,
+                size=10,
+                bold=winner and c == 0,
+                fill=bg,
+                color=INK,
+                align=align,
+            )
     return table
 
 
@@ -238,7 +249,7 @@ def reading(prs, data):
         add_text(slide, left + Inches(0.2), Inches(2.95), Inches(3.6), Inches(3.5), body, size=13)
 
 
-def data_block(prs, ads, kind: str, *, campaign: str, extra: str = ""):
+def data_block(prs, ads, kind: str, *, campaign: str, extra: str = "", winner=None):
     specs = {
         "competitiveness": {
             "act": "2 · Dados",
@@ -290,23 +301,39 @@ def data_block(prs, ads, kind: str, *, campaign: str, extra: str = ""):
     }
     spec = specs[kind]
     locked = ads[:TOP_ADS]
+    winner = winner or {}
+    winner_name = dash(winner.get("name"))
+    winner_why = dash(winner.get("why"))
     slide = blank_slide(prs)
     add_act(slide, spec["act"], f"{spec['title']} · {campaign}")
     add_text(
         slide,
         MARGIN,
-        Inches(0.88),
+        Inches(0.86),
         Inches(12.4),
-        Inches(0.36),
+        Inches(0.28),
         f"{spec['subtitle']} Top {TOP_ADS} com gasto > R$ {MIN_SPEND_BRL}. Mesma ordem nas três etapas.{extra}",
-        size=12,
+        size=11,
         color=MUTED,
     )
+    if winner_name != "—":
+        callout = f"Campeão desta etapa: {winner_name}"
+        if winner_why != "—":
+            callout = f"{callout}  ·  {winner_why}"
+    else:
+        callout = "Campeão desta etapa: — (sem amostra para coroar)"
+    add_text(slide, MARGIN, Inches(1.12), Inches(12.4), Inches(0.3), callout, size=14, bold=True)
 
     rows = []
-    for ad in locked:
+    highlight = []
+    for i, ad in enumerate(locked):
         block = ad.get(kind) or {}
-        row = [dash(ad.get("name"))]
+        name = dash(ad.get("name"))
+        is_winner = winner_name != "—" and name == winner_name
+        if is_winner:
+            name = f"★ {name}"
+            highlight.append(i + 1)
+        row = [name]
         for key in spec["keys"]:
             row.append(dash(block.get(key)))
         rows.append(row)
@@ -318,10 +345,11 @@ def data_block(prs, ads, kind: str, *, campaign: str, extra: str = ""):
         spec["headers"],
         rows,
         left=MARGIN,
-        top=Inches(1.32),
+        top=Inches(1.46),
         width=Inches(12.4),
-        height=Inches(5.55),
+        height=Inches(5.4),
         header_fill=spec["fill"],
+        highlight_rows=highlight,
     )
 
 
@@ -346,8 +374,9 @@ def campaign_sections(prs, data):
         extra = ""
         if below:
             extra = f" {below} ads com R$ {MIN_SPEND_BRL} ou menos, fora desta análise."
+        winners = camp.get("stage_winners") or {}
         for kind in ("competitiveness", "attractiveness", "conversion"):
-            data_block(prs, ads, kind, campaign=name, extra=extra)
+            data_block(prs, ads, kind, campaign=name, extra=extra, winner=winners.get(kind))
         for champ in campaign_champions(camp):
             if shown >= 3:
                 break

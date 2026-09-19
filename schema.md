@@ -27,6 +27,11 @@ O agente filtra **antes** de gravar o JSON: gasto **> R$ 15**, agrupa por campan
       "name": "Advantage+ NC Regepepty",
       "spend": "R$ 39,2 mil",
       "below_floor": 2,
+      "stage_winners": {
+        "competitiveness": { "name": "UGC Rotina 15s", "why": "CPM R$ 19,78 — o mais barato para aparecer" },
+        "attractiveness": { "name": "UGC Rotina 15s", "why": "CTR 1,82% · hook 38%" },
+        "conversion": { "name": "UGC Rotina 15s", "why": "ROAS 4,80x · CPA R$ 205" }
+      },
       "ads": [
         {
           "name": "UGC Rotina 15s",
@@ -128,6 +133,7 @@ O agente filtra **antes** de gravar o JSON: gasto **> R$ 15**, agrupa por campan
 `tone` do anúncio: `performing` | `weak` | `early` | `kill` | `neutral`.
 `campaigns[].ads`: já filtrados (gasto > R$ 15), ordenados por gasto, no máximo 10. Essa ordem é a ordem das três etapas.
 `below_floor`: quantos ads da campanha ficaram de fora por gasto ≤ R$ 15.
+`stage_winners`: obrigatório por campanha com tabela. `competitiveness` | `attractiveness` | `conversion` → `{ name, why }`. Sem amostra, omitir a chave (o slide escreve “—”).
 `champion` ou `champions`: opcional, por campanha. No máximo 3 slides de campeão no deck inteiro.
 `creative.kind`: `video` | `image` | `carousel`. `creative.file` = caminho local da imagem ou do poster. `creative.video` = mp4 local, se houver.
 Campeão de vídeo sem `retention.drop` (segundo + cena) está incompleto.

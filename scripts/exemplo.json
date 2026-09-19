@@ -311,7 +311,21 @@
             "drop": "Queda no 4s — a fala de dor acaba e ainda não mostrou o pote."
           }
         }
-      ]
+      ],
+      "stage_winners": {
+        "competitiveness": {
+          "name": "UGC Rotina 15s",
+          "why": "CPM R$ 19,78 — o mais barato para aparecer"
+        },
+        "attractiveness": {
+          "name": "UGC Rotina 15s",
+          "why": "CTR 1,82% · hook 38%"
+        },
+        "conversion": {
+          "name": "UGC Rotina 15s",
+          "why": "ROAS 4,80x · CPA R$ 205"
+        }
+      }
     },
     {
       "name": "Teste NC Antes/Depois",
@@ -399,6 +413,20 @@
           "avg_time": "5,1s",
           "drop": "Queda no 8s — o depois já apareceu; o resto é repetição."
         }
+      },
+      "stage_winners": {
+        "competitiveness": {
+          "name": "UGC Antes/Depois 12s",
+          "why": "único ad da campanha acima do piso"
+        },
+        "attractiveness": {
+          "name": "UGC Antes/Depois 12s",
+          "why": "CTR 2,10% · hook 41%"
+        },
+        "conversion": {
+          "name": "UGC Antes/Depois 12s",
+          "why": "ROAS 3,10x — amostra curta"
+        }
       }
     },
     {
@@ -468,7 +496,21 @@
             "roas": "1,60x"
           }
         }
-      ]
+      ],
+      "stage_winners": {
+        "competitiveness": {
+          "name": "Reels prova social",
+          "why": "CPM R$ 12,73 — mais barato que o carrossel"
+        },
+        "attractiveness": {
+          "name": "Reels prova social",
+          "why": "CTR 1,10% · hook 29%"
+        },
+        "conversion": {
+          "name": "Carrossel kit 3",
+          "why": "ROAS 2,40x — o Reels para no clique"
+        }
+      }
     },
     {
       "name": "Prospecting UGC testes",
@@ -506,7 +548,21 @@
             "roas": "2,10x"
           }
         }
-      ]
+      ],
+      "stage_winners": {
+        "competitiveness": {
+          "name": "UGC rotina 9:16 v3",
+          "why": "único ad da campanha acima do piso"
+        },
+        "attractiveness": {
+          "name": "UGC rotina 9:16 v3",
+          "why": "CTR 1,40% · hook 33%"
+        },
+        "conversion": {
+          "name": "UGC rotina 9:16 v3",
+          "why": "ROAS 2,10x"
+        }
+      }
     }
   ]
 }

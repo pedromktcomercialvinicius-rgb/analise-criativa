@@ -4,6 +4,16 @@ Fórmulas usam **totais da semana** (não média das médias). Clique = **clique
 
 Recorte da tabela: gasto **> R$ 15**, **por campanha**, top 10 por gasto. Mediana e “acima do mix” = peers da mesma campanha.
 
+## Campeão da etapa
+
+Nas três telas de dados, coroar **um** ad da campanha:
+
+- Competitividade → menor CPM
+- Atratividade → maior CTR de link
+- Conversão → maior ROAS com compra (sem compra = sem campeão)
+
+O número vai no `why` (“CPM R$ 19,78”, “CTR 2,10%”, “ROAS 4,80x”).
+
 ## Competitividade
 
 O anúncio está barato ou caro para aparecer?

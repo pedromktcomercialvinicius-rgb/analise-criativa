@@ -43,13 +43,15 @@ PPT 16:9 não cabe competitividade + atratividade + conversão numa grade só co
 
 O olho acompanha a linha. Não paginar além do top 10. Não misturar campanhas na mesma página.
 
+Em **cada** uma das três telas, nomear o **campeão daquela etapa** (pode ser um ad diferente em cada). A linha dele vai marcada. O slide de peça no fim da campanha é o campeão de DNA (em geral o de conversão) — não confundir os dois.
+
 ## Estrutura do PPT (obrigatória)
 
 Nesta ordem:
 
 1. **Capa** — conta, semana W-1 vs W-2, investimento Meta, ROAS, % da receita na peça líder, **campanhas ativas (total + lista)**. Nota: Google fora deste deck.
 2. **Leitura** — 2–4 frases em linguagem de cliente. Três caixas: segue performando / perdeu força / sai de linha.
-3. **Por campanha** — 1 página de Competitividade + 1 de Atratividade + 1 de Conversão (top 10, mesma ordem). Depois, se houver, o slide do campeão **dessa** campanha: **a peça na tela** (imagem ou frame/vídeo), roteiro, ângulo, KPIs e retenção (até que segundo o usuário ficou).
+3. **Por campanha** — 1 página de Competitividade + 1 de Atratividade + 1 de Conversão (top 10, mesma ordem), cada uma com **quem é o campeão da etapa**. Depois, se houver, o slide do campeão **dessa** campanha: **a peça na tela** (imagem ou frame/vídeo), roteiro, ângulo, KPIs e retenção (até que segundo o usuário ficou).
 4. **Pedido · DNA** — variações com a campanha no pedido: copia 1 coisa, muda 1 variável. Critério de leitura.
 5. **Pedido · ideias novas** — 1–2 apostas com teto, explícitas como teste. Fecha com o que **não** pedimos nesta semana.
 
@@ -67,6 +69,20 @@ Não entregar JSON solto no lugar do PPT. Não entregar Doc. A entrega é o `.pp
 Saturação só aparece se **frequência subiu e CTR/hook caiu** juntos. “O criativo morreu” no slide é erro. Hipótese ≠ fato.
 
 Não usar jargão de leilão (Advantage+, CPM de leilão, sessão cega) no corpo. Se precisar, uma nota de rodapé.
+
+## Campeão da etapa (nas 3 telas de dados)
+
+Só compete quem está nos top 10 da **mesma** campanha. Um ad pode ganhar uma etapa e perder outra — isso é o ponto. Escrever `stage_winners` no JSON.
+
+| Etapa | Quem ganha | Desempate |
+|---|---|---|
+| Competitividade | menor CPM | menor frequência |
+| Atratividade | maior CTR de link | maior hook (vídeo); estático compete só no CTR |
+| Conversão | maior ROAS **com compra** | menor CPA |
+
+Sem compra, não há campeão de conversão (“—”). Amostra irrisória: não coroar. O texto do slide é `Campeão desta etapa: [nome] · [número]`.
+
+O slide **Campeão · campanha** (peça + hipótese) continua sendo no máximo 3 no deck, em geral o vencedor de conversão.
 
 ## Como classificar
 
@@ -90,7 +106,7 @@ Nutrir a conta. Não é “fazer criativo”.
 
 1. Ler [metricas.md](metricas.md), [fontes.md](fontes.md) e [meta-mcp.md](meta-mcp.md).
 2. Pegar a tabela de anúncios (MCP, planilha, CSV). Não inventar linha.
-3. Classificar. Escolher até 3 campeões. **Para cada campeão:** baixar a peça, assistir/ler (imagem, roteiro, ângulo; se vídeo, frames + curva de retenção), cruzar com KPIs, só então escrever a hipótese.
+3. Classificar. Em cada campanha, coroar o campeão de competitividade, atratividade e conversão. Escolher até 3 campeões de peça. **Para cada campeão de peça:** baixar a peça, assistir/ler (imagem, roteiro, ângulo; se vídeo, frames + curva de retenção), cruzar com KPIs, só então escrever a hipótese.
 4. Gravar JSON no schema de [schema.md](schema.md) (ex.: `/tmp/analise-criativa.json`), com `creative.file` local.
 5. Gerar o PPT:
 
@@ -109,7 +125,7 @@ O `run.sh` cria um venv local e instala `python-pptx` na primeira vez. Não usar
 - [ ] Só Meta; Google só na nota da capa
 - [ ] Capa com total de campanhas ativas (gasto em W-1) e a lista
 - [ ] Só ads com gasto > R$ 15; por campanha; top 10 por gasto
-- [ ] 3 telas por campanha, mesmas linhas, mesma ordem
+- [ ] 3 telas por campanha, mesmas linhas, mesma ordem, **campeão da etapa nomeado**
 - [ ] Atratividade tem hook / hold 50% / ThruPlay (vídeo) ou “—”
 - [ ] Clique = clique de link
 - [ ] Conversão tem pageview, C.C/carrinho e compras (volume, taxa vs etapa anterior, CPA)

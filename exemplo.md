@@ -8,7 +8,7 @@ Formato do PPT, não os números. Conta fictícia.
 
 **Leitura.** A conta não perdeu peça boa. Perdeu força num depoimento com frequência 3,4 e CTR −36%. O UGC de rotina segue em 4,8x.
 
-**Dados.** Por campanha. Advantage+ NC: top 10 (aqui 4 ads) com gasto > R$ 15, mesma ordem em Competitividade / Atratividade / Conversão. Teste NC e RC cada um no bloco deles. Hook no estático = “—”. Sem compra = “—” no ROAS.
+**Dados.** Por campanha. Advantage+ NC: top 10 (aqui 4 ads) com gasto > R$ 15, mesma ordem em Competitividade / Atratividade / Conversão. Em cada tela: **Campeão desta etapa: [ad] · [número]**. Teste NC e RC cada um no bloco deles. No RC o campeão de competitividade (Reels, CPM) **não** é o de conversão (Carrossel, ROAS).
 
 **Campeão.** UGC Rotina 15s na tela (vídeo), **na campanha** Advantage+ NC. Roteiro de hábito, queda no 6s quando some o rosto. Hipótese: a próxima leva copia isso e troca uma abertura.
 
@@ -20,7 +20,7 @@ Formato do PPT, não os números. Conta fictícia.
 - Uma tabela com 16 colunas numa slide só (fonte ilegível).
 - Misturar ads de campanhas diferentes na mesma tabela.
 - Incluir ad de R$ 15 ou menos.
-- Top 10 numa ordem na Competitividade e outra na Conversão.
+- Três telas de dados sem dizer quem ganhou a etapa.
 - Google no mesmo ranking da Meta.
 - “O criativo morreu” no lugar de frequência + CTR.
 - Carrinho em Atratividade misturado com hook.
