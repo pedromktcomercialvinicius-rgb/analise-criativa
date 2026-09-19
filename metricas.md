@@ -65,3 +65,22 @@ C.C, tx carrinho e CPA carrinho ficam **neste bloco**, não em Atratividade. Car
 ## Campeão (slide)
 
 Além do W-1, mostrar W-2 quando existir: hook, CTR, frequência, ROAS. Sem W-2 = “—”.
+
+O slide **mostra a peça**: imagem no estático; no vídeo, o frame (e o mp4 no JSON para o agente ter assistido). Sem arquivo local, o quadro da peça fica vazio — não usar print genérico.
+
+### Retenção (só vídeo)
+
+Até onde o usuário ficou? Taxa = views daquele marco ÷ impressões, salvo hold.
+
+| Indicador | Campo Meta | Fórmula | Lê o quê |
+|---|---|---|---|
+| Hook 3s | `actions` video_view | views 3s ÷ impressões | parou no gancho? |
+| 25% | `video_p25_watched_actions` | p25 ÷ impressões | passou da abertura? |
+| Hold 50% | `video_p50_watched_actions` | p50 ÷ views 3s | segurou o miolo? |
+| 75% | `video_p75_watched_actions` | p75 ÷ impressões | chegou perto do CTA? |
+| Fim / ThruPlay | `video_p100` ou `video_thruplay_watched_actions` | ÷ impressões | foi até o fim? |
+| Tempo médio | `video_avg_time_watched_actions` | segundos | quanto ficou, em média |
+
+**Curva** (`video_play_curve_actions`): % dos plays em cada segundo (0–14 = segundo a segundo). A **queda** é o maior tombo consecutivo ainda dentro da duração. Escrever o segundo **e** a cena (“no 6s some o rosto”). Sem cruzar curva × frame, não afirmar onde perdeu gente.
+
+Estático / carrossel sem vídeo: todas essas células = “—”.

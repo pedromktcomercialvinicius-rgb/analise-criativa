@@ -8,9 +8,10 @@ Ainda **não há dados de ads no banco**. Não consultar Lovable Cloud, não inv
 
 Até existir tabela no Supabase:
 
-1. Usar a planilha / CSV / print que o usuário mandar.
-2. Mapear colunas para [metricas.md](metricas.md).
-3. Se faltar hook, hold, ThruPlay ou pageview, a célula é “—” e a capa/leitura declara o buraco. Não estimar.
+1. **Preferir o MCP de Meta Ads** — [meta-mcp.md](meta-mcp.md). Puxar ads, criativo, mídia e insights. Assistir o campeão.
+2. Se não houver MCP: planilha / CSV / print que o usuário mandar, **mais o arquivo da peça** (jpg/png/mp4) para o campeão.
+3. Mapear colunas para [metricas.md](metricas.md).
+4. Se faltar hook, hold, ThruPlay, pageview ou a mídia, a célula/quadro é “—” e a capa/leitura declara o buraco. Não estimar.
 
 Quando o Supabase deste app tiver fato diário de anúncio, este arquivo aponta a tabela. Até lá, a fonte é o arquivo da semana.
 
@@ -22,7 +23,7 @@ Mínimo para atratividade: cliques de link (ou cliques, se só isso vier — dec
 
 Mínimo para conversão: compras, receita. Sem isso não há campeão de retorno.
 
-Desejável: frequência (ou alcance para calcular), CPM (ou calcular), CTR/CPC (ou calcular), video 3s / p50 / ThruPlay, pageview, add to cart.
+Desejável: frequência (ou alcance para calcular), CPM (ou calcular), CTR/CPC (ou calcular), video 3s / p25 / p50 / p75 / ThruPlay, `video_play_curve_actions`, pageview, add to cart, **arquivo da peça do campeão**.
 
 ## Google e GA4
 

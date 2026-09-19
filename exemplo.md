@@ -10,7 +10,7 @@ Formato do PPT, não os números. Conta fictícia.
 
 **Dados.** Por campanha. Advantage+ NC: top 10 (aqui 4 ads) com gasto > R$ 15, mesma ordem em Competitividade / Atratividade / Conversão. Teste NC e RC cada um no bloco deles. Hook no estático = “—”. Sem compra = “—” no ROAS.
 
-**Campeão.** UGC Rotina 15s, **na campanha** Advantage+ NC. O que funcionou: 15s, gancho de hábito, kit sem %. Hipótese: a próxima leva copia isso e troca uma abertura.
+**Campeão.** UGC Rotina 15s na tela (vídeo), **na campanha** Advantage+ NC. Roteiro de hábito, queda no 6s quando some o rosto. Hipótese: a próxima leva copia isso e troca uma abertura.
 
 **Pedido.** 2 variações do DNA + 1 ideia nova com teto. Não pedir estático de desconto nem depoimento 30s.
 
@@ -24,7 +24,8 @@ Formato do PPT, não os números. Conta fictícia.
 - Google no mesmo ranking da Meta.
 - “O criativo morreu” no lugar de frequência + CTR.
 - Carrinho em Atratividade misturado com hook.
-- Campeão com R$ 200 de gasto.
+- Campeão sem a peça na slide (imagem ou frame do vídeo).
+- Vídeo campeão sem dizer até que segundo o usuário ficou.
 - Pedido “fazer 10 criativos novos” sem DNA.
 - #DIV/0! no ROAS.
 - Hipótese sem número. Número sem pedido.

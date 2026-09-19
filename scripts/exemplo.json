@@ -237,7 +237,29 @@
             "Gancho: “eu tomo isso todo dia antes do café” — hábito, não depoimento clínico.",
             "Oferta: kit na cena, sem faixa de desconto na tela."
           ],
-          "hypothesis": "O que vende aqui é prova de hábito em 15 segundos. A próxima leva copia este DNA e só troca uma variável."
+          "hypothesis": "O que vende aqui é prova de hábito em 15 segundos. A próxima leva copia este DNA e só troca uma variável.",
+          "creative": {
+            "kind": "video",
+            "file": "scripts/fixtures/ugc-rotina.png",
+            "video": "",
+            "duration": "15s"
+          },
+          "script": {
+            "hook": "“eu tomo isso todo dia antes do café”",
+            "body": "Rotina de manhã, kit na pia, sem % na tela.",
+            "cta": "kit 3 potes no fim, sem fala de desconto",
+            "on_screen": "rosto + pote; oferta só no objeto"
+          },
+          "angle": "Hábito / prova de uso, não depoimento clínico.",
+          "retention": {
+            "hook": "38%",
+            "p25": "28%",
+            "p50": "18%",
+            "p75": "12%",
+            "p100": "9%",
+            "avg_time": "4,2s",
+            "drop": "Queda no 6s — some o rosto e entra o pote fechado."
+          }
         },
         {
           "name": "UGC Rotina v2 (dor)",
@@ -265,7 +287,29 @@
             "Hook um pouco menor que o original, mas quem clica compra no mesmo ritmo.",
             "O DNA de rotina aguenta variação de abertura — não depende de uma frase só."
           ],
-          "hypothesis": "Ângulo de dor funciona como porta de entrada; o meio do vídeo (rotina + kit) é o que converte."
+          "hypothesis": "Ângulo de dor funciona como porta de entrada; o meio do vídeo (rotina + kit) é o que converte.",
+          "creative": {
+            "kind": "video",
+            "file": "scripts/fixtures/ugc-rotina.png",
+            "video": "",
+            "duration": "15s"
+          },
+          "script": {
+            "hook": "“minha pele não reagia a nada”",
+            "body": "Mesmo miolo de rotina + kit.",
+            "cta": "kit na cena",
+            "on_screen": "abertura de dor, depois a mesma rotina"
+          },
+          "angle": "Dor como porta; hábito no miolo.",
+          "retention": {
+            "hook": "36%",
+            "p25": "26%",
+            "p50": "17%",
+            "p75": "11%",
+            "p100": "8%",
+            "avg_time": "4,0s",
+            "drop": "Queda no 4s — a fala de dor acaba e ainda não mostrou o pote."
+          }
         }
       ]
     },
@@ -332,7 +376,29 @@
           "CTR acima dos campeões maduros.",
           "Ainda não é campeão de retorno: pouca compra para declarar vitória."
         ],
-        "hypothesis": "Antes/depois ganha a parada no feed. Pode virar o próximo líder se o CPA se sustentar com mais verba."
+        "hypothesis": "Antes/depois ganha a parada no feed. Pode virar o próximo líder se o CPA se sustentar com mais verba.",
+        "creative": {
+          "kind": "video",
+          "file": "scripts/fixtures/ugc-antes-depois.png",
+          "video": "",
+          "duration": "12s"
+        },
+        "script": {
+          "hook": "Resultado visual no 1º frame, sem rosto.",
+          "body": "Antes/depois em 12s, sem depoimento.",
+          "cta": "kit rápido no fim",
+          "on_screen": "split de pele; sem faixa de %"
+        },
+        "angle": "Prova visual / transformação.",
+        "retention": {
+          "hook": "41%",
+          "p25": "32%",
+          "p50": "21%",
+          "p75": "14%",
+          "p100": "11%",
+          "avg_time": "5,1s",
+          "drop": "Queda no 8s — o depois já apareceu; o resto é repetição."
+        }
       }
     },
     {

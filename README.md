@@ -8,7 +8,7 @@ Skill para montar o **deck semanal de criativos Meta Ads** em PowerPoint: compet
 - Só Meta; Google replica campeões a cada 14 dias (fora deste deck)
 - Anúncio com gasto **> R$ 15** na semana; top 10 **por campanha**
 - 3 telas de dados por campanha (mesmos ads, mesma ordem)
-- Até 3 slides de campeão (o que funcionou + hipótese)
+- Até 3 slides de campeão: peça na tela (imagem ou vídeo/frame), roteiro, ângulo, retenção, hipótese
 - Pedido = DNA do campeão + 1–2 ideias novas
 
 ## Instalar
@@ -41,6 +41,7 @@ O contrato da skill é o `SKILL.md`. As outras IAs não “puxam o GitHub sozinh
 | `SKILL.md` | Ordem do deck, regras, como gerar o PPT |
 | `metricas.md` | Fórmulas dos 3 blocos |
 | `fontes.md` | De onde vem o dado (planilha até o banco existir) |
+| `meta-mcp.md` | Como o MCP da Meta baixa a peça, assiste e lê a retenção |
 | `schema.md` | JSON que o script espera |
 | `exemplo.md` | Bom vs ruim |
 | `scripts/run.sh` | Cria venv e gera o `.pptx` |

@@ -63,6 +63,28 @@ O agente filtra **antes** de gravar o JSON: gasto **> R$ 15**, agrupa por campan
       "champion": {
         "name": "UGC Rotina 15s",
         "meta": "Novos clientes · kit 3 potes · 3 semanas no ar",
+        "creative": {
+          "kind": "video",
+          "file": "scripts/fixtures/ugc-rotina.png",
+          "video": "",
+          "duration": "15s"
+        },
+        "script": {
+          "hook": "“eu tomo isso todo dia antes do café”",
+          "body": "Rotina de manhã, kit na pia, sem % na tela.",
+          "cta": "kit 3 potes no fim, sem fala de desconto",
+          "on_screen": "rosto + pote; oferta só no objeto"
+        },
+        "angle": "Hábito / prova de uso, não depoimento clínico.",
+        "retention": {
+          "hook": "38%",
+          "p25": "28%",
+          "p50": "18%",
+          "p75": "12%",
+          "p100": "9%",
+          "avg_time": "4,2s",
+          "drop": "Queda no 6s — some o rosto e entra o pote fechado."
+        },
         "stats": [
           { "value": "4,8x", "label": "ROAS (4,6x na semana passada)" },
           { "value": "38%", "label": "Hook rate" },
@@ -107,4 +129,6 @@ O agente filtra **antes** de gravar o JSON: gasto **> R$ 15**, agrupa por campan
 `campaigns[].ads`: já filtrados (gasto > R$ 15), ordenados por gasto, no máximo 10. Essa ordem é a ordem das três etapas.
 `below_floor`: quantos ads da campanha ficaram de fora por gasto ≤ R$ 15.
 `champion` ou `champions`: opcional, por campanha. No máximo 3 slides de campeão no deck inteiro.
+`creative.kind`: `video` | `image` | `carousel`. `creative.file` = caminho local da imagem ou do poster. `creative.video` = mp4 local, se houver.
+Campeão de vídeo sem `retention.drop` (segundo + cena) está incompleto.
 `dna_requests` + `new_ideas` ≤ 5 no total.

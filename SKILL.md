@@ -3,7 +3,8 @@ name: analise-criativa
 description: >-
   Gera análise criativa semanal de Meta Ads em PowerPoint (visão de anúncio):
   competitividade, atratividade (CTR, hook rate, hold, ThruPlay) e conversão
-  (funil pageview → carrinho → compra), classifica campeões, hipóteses do que
+  (funil pageview → carrinho → compra), classifica campeões depois de
+  assistir a peça (imagem/vídeo, roteiro, ângulo, retenção), hipóteses do que
   funcionou e pedidos de novos ads a partir do DNA. Use when the user asks for
   análise criativa, relatório de criativos, deck de ads, PPT de criativos,
   campeões de Facebook/Meta, or pedido de novos anúncios.
@@ -13,7 +14,7 @@ description: >-
 
 Deck para o **cliente**, apresentado pelo especialista. Tom direto, em português. Visão de **anúncio**. Não reabre o FUP. Não mistura Google neste relatório.
 
-Antes de montar números, leia [metricas.md](metricas.md). Fontes: [fontes.md](fontes.md). Exemplo bom vs ruim: [exemplo.md](exemplo.md). Schema do JSON: [schema.md](schema.md).
+Antes de montar números, leia [metricas.md](metricas.md). Fontes: [fontes.md](fontes.md). Se houver MCP de Meta Ads, siga [meta-mcp.md](meta-mcp.md) — **assistir a peça do campeão é obrigatório**. Exemplo bom vs ruim: [exemplo.md](exemplo.md). Schema do JSON: [schema.md](schema.md).
 
 ## Quando usar
 
@@ -48,7 +49,7 @@ Nesta ordem:
 
 1. **Capa** — conta, semana W-1 vs W-2, investimento Meta, ROAS, % da receita na peça líder, **campanhas ativas (total + lista)**. Nota: Google fora deste deck.
 2. **Leitura** — 2–4 frases em linguagem de cliente. Três caixas: segue performando / perdeu força / sai de linha.
-3. **Por campanha** — 1 página de Competitividade + 1 de Atratividade + 1 de Conversão (top 10, mesma ordem). Depois, se houver, o slide do campeão **dessa** campanha.
+3. **Por campanha** — 1 página de Competitividade + 1 de Atratividade + 1 de Conversão (top 10, mesma ordem). Depois, se houver, o slide do campeão **dessa** campanha: **a peça na tela** (imagem ou frame/vídeo), roteiro, ângulo, KPIs e retenção (até que segundo o usuário ficou).
 4. **Pedido · DNA** — variações com a campanha no pedido: copia 1 coisa, muda 1 variável. Critério de leitura.
 5. **Pedido · ideias novas** — 1–2 apostas com teto, explícitas como teste. Fecha com o que **não** pedimos nesta semana.
 
@@ -87,10 +88,10 @@ Nutrir a conta. Não é “fazer criativo”.
 
 ## Como produzir
 
-1. Ler [metricas.md](metricas.md) e [fontes.md](fontes.md).
-2. Pegar a tabela de anúncios (planilha colada, CSV, ou o que o usuário mandar). Não inventar linha.
-3. Classificar. Escolher até 3 campeões. Escrever hipóteses e pedidos.
-4. Gravar JSON no schema de [schema.md](schema.md) (ex.: `/tmp/analise-criativa.json`).
+1. Ler [metricas.md](metricas.md), [fontes.md](fontes.md) e [meta-mcp.md](meta-mcp.md).
+2. Pegar a tabela de anúncios (MCP, planilha, CSV). Não inventar linha.
+3. Classificar. Escolher até 3 campeões. **Para cada campeão:** baixar a peça, assistir/ler (imagem, roteiro, ângulo; se vídeo, frames + curva de retenção), cruzar com KPIs, só então escrever a hipótese.
+4. Gravar JSON no schema de [schema.md](schema.md) (ex.: `/tmp/analise-criativa.json`), com `creative.file` local.
 5. Gerar o PPT:
 
 ```bash
@@ -113,6 +114,7 @@ O `run.sh` cria um venv local e instala `python-pptx` na primeira vez. Não usar
 - [ ] Clique = clique de link
 - [ ] Conversão tem pageview, C.C/carrinho e compras (volume, taxa vs etapa anterior, CPA)
 - [ ] Sem compra → “—”, não #DIV/0!
-- [ ] ≤ 3 slides de campeão, cada um com hipótese do que funcionou
+- [ ] ≤ 3 slides de campeão, cada um com a peça (imagem ou vídeo/frame), roteiro, ângulo e hipótese
+- [ ] Vídeo campeão tem retenção (3s / 25 / 50 / 75 / fim) e o segundo da queda, cruzado com a cena
 - [ ] Pedido DNA + 1–2 ideias novas + o que não pedir
 - [ ] Arquivo `.pptx` gerado pelo script, não HTML
